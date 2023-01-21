@@ -22,6 +22,9 @@ body {
   --fonokolor-color: #ffffff;
   --hovercolor-color: #404bbf;
   --btncolor-color: #4d5ae5;
+  --graylight-color: #f4f4fd;
+  --grayday-color: #e7e9fc;
+  --greay-color: #8e8f99;
   --gradi: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
 
@@ -120,22 +123,13 @@ address {
   display: flex;
   align-items: center;
 }
-.adress-icon {
-  display: flex;
-  align-items: center;
-}
-.email-icon {
-  fill: #434455;
-}
-.tel-icon {
-  fill: #434455;
-}
 /*---------------Hero----------------*/
 
 .hero {
+  max-width: 1440px;
+  margin: 0 auto;
   text-align: center;
   padding: 188px 0;
-  flex-grow: 1;
   background-image: var(--gradi), url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -168,9 +162,8 @@ address {
 /*--------------Section2---------------*/
 
 .advantages-box {
-  width: 264px;
   height: 112px;
-  background-color: #f4f4fd;
+  background-color: var(--graylight-color);
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -219,7 +212,7 @@ address {
   list-style-type: none;
 }
 .team {
-  background-color: #f4f4fd;
+  background-color: var(--graylight-color);
 }
 .people-ul {
   display: flex;
@@ -228,17 +221,18 @@ address {
   list-style-type: none;
 }
 .people-li {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 2px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .nametext {
+  padding-bottom: 32px;
   padding-top: 32px;
   border-width: 1px;
   border-style: solid;
   border-top: none;
-  border-color: #e7e9fc;
-  background-color: #ffffff;
+  border-color: var(--grayday-color);
+  background-color: var(--fonokolor-color);
 }
 .soc-ul {
   display: flex;
@@ -246,7 +240,6 @@ address {
   gap: 24px;
   list-style-type: none;
   margin-top: 8px;
-  margin-bottom: 32px;
 }
 .soc-item {
   width: 40px;
@@ -262,12 +255,15 @@ address {
   justify-content: center;
   align-items: center;
 }
+.soc-link:is(:focus, :hover) {
+  background: #404bbf;
+}
 /*-----------------section4---------*/
 
 .customers-box {
   width: 168px;
   height: 88px;
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--greay-color);
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -280,7 +276,7 @@ address {
   fill: var(--hovercolor-color);
 }
 .customers-icon {
-  fill: #8e8f99;
+  fill: var(--greay-color);
 }
 .customers-icon:is(:hover) {
   fill: var(--hovercolor-color);
@@ -289,7 +285,6 @@ address {
   gap: 24px;
   display: flex;
   list-style-type: none;
-  padding-bottom: 120px;
 }
 /*----------------footer-----------*/
 .footer {
@@ -306,7 +301,7 @@ address {
   max-width: 300px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #e7e9fc;
+  color: var(--grayday-color);
 }
 .footer-logotup {
   display: block;
@@ -314,12 +309,12 @@ address {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  color: #f4f4fd;
+  color: var(--graylight-color);
   text-decoration: none;
   text-transform: uppercase;
 }
 .title-media {
-  color: #ffffff;
+  color: var(--fonokolor-color);
 }
 .title-soc {
   margin-left: 120px;
@@ -341,12 +336,14 @@ address {
   line-height: 24px;
   cursor: pointer;
   color: var(--btncolor-color);
-  background-color: #f4f4fd;
-  border-color: #8e8f99;
+  background-color: var(--graylight-color);
+  border-color: var(--greay-color);
 }
 .btn-ul button:hover {
   color: var(--fonokolor-color);
   background-color: var(--hovercolor-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 .btn-ul {
   margin-bottom: 72px;
@@ -360,7 +357,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  column-gap: 24px;
+  column-gap: 22px;
   row-gap: 48px;
 }
 .divcard {
@@ -371,7 +368,7 @@ address {
   border-width: 1px;
   border-style: solid;
   border-top: none;
-  border-color: #e7e9fc;
+  border-color: var(--grayday-color);
 }
 .portfolio {
   padding-top: 96px;
@@ -379,8 +376,8 @@ address {
 .card-link {
   text-decoration: none;
 }
-.card-link:is(:focus, :hover) {
-  border: 0.5px solid #f4f4fd;
+.li-card:is(:focus, :hover) {
+  border: 0.5px solid var(--graylight-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
